@@ -26,7 +26,7 @@ if (cluster.isPrimary) {
 } else {
   /*--------------------------  Server  --------------------------*/
   const app = express();
-  const PORT = 8080;
+  const PORT = process.env.port || 8080;
 
   const corsOptions = {
     origin: "http://localhost:5173",
