@@ -11,6 +11,7 @@ const getUser = async (req, res) => {
       .cookie("authToken", token, {
         maxAge: 1000 * 3600 * 6,
         httpOnly: true,
+        sameSite: "none",
       })
       .send({ status: "success", message: "Logged In" });
   } catch (error) {
