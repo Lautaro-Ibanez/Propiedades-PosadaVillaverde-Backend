@@ -12,6 +12,7 @@ const getUser = async (req, res) => {
         maxAge: 1000 * 3600 * 6,
         httpOnly: true,
         sameSite: "none",
+        secure: true,
       })
       .send({ status: "success", message: "Logged In" });
   } catch (error) {
