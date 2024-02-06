@@ -2,16 +2,16 @@ import express from "express";
 import cluster from "cluster";
 import os from "os";
 import mongoose from "mongoose";
-import config from "./config/config.js";
+import config from "./src/config/config.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
-import initializePassport from "./config/passport.config.js";
+import initializePassport from "./src/config/passport.config.js";
 
-import propertyRouter from "./routes/property-router.js";
-import sessionRouter from "./routes/session-router.js";
+import propertyRouter from "./src/routes/property-router.js";
+import sessionRouter from "./src/routes/session-router.js";
 
-import __dirname from "./util.js";
+import __dirname from "./src/util.js";
 
 const cpus = os.cpus().length;
 const connection = mongoose.connect(config.mongoURL);
