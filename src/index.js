@@ -29,7 +29,7 @@ if (cluster.isPrimary) {
   const PORT = process.env.port || 8080;
 
   const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5174",
     credentials: true,
   };
 
