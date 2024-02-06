@@ -43,6 +43,9 @@ if (cluster.isPrimary) {
   initializePassport();
 
   /*--------------------------  Routes  --------------------------*/
+  app.get("/", (req,res)=>{
+    res.send("hello world!")
+  })
 
   app.use("/api/propertys", propertyRouter);
   app.use("/api/sessions", sessionRouter);
